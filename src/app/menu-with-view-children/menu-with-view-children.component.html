@@ -1,0 +1,15 @@
+<ng-container *ngIf="show">
+  <button [matMenuTriggerData]="menuData" [matMenuTriggerFor]="menu"
+          mat-raised-button color="primary" [style.width.%]="width">
+    OPTION
+  </button>
+
+  <mat-menu #menu="matMenu" class="menu">
+    <ng-template matMenuContent let-menuWidth="menuWidth">
+      <div [style.width.px]="menuWidth">
+        <button mat-menu-item>First</button>
+        <button mat-menu-item>Second</button>
+      </div>
+    </ng-template>
+  </mat-menu>
+</ng-container>
